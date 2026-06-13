@@ -38,7 +38,7 @@ export default function App() {
   // Seed the bundled sample once (no history entry, so undo can't erase it).
   useEffect(() => {
     let cancelled = false;
-    fetch("/sample-logo.svg")
+    fetch(`${import.meta.env.BASE_URL}sample-logo.svg`)
       .then((r) => r.text())
       .then((t) => {
         if (cancelled) return;
@@ -173,7 +173,7 @@ export default function App() {
       <div className="mx-auto max-w-7xl px-6 py-10">
         <header className="flex flex-col items-center text-center">
           <p className="text-xs font-medium uppercase tracking-[0.22em] text-neutral-400">
-            Logo Creator
+            Logo Studio
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
             Design your app icon
